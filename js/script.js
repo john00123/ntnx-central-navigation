@@ -51,6 +51,7 @@ function setProduct(e_product) {
   $('#products').removeClass('prod-expanded')
   $('#navigation').html('');
   let filename = "./sitemap/" + e_product.toLowerCase().replace(' ', "-") + ".json";
+
   $.getJSON(filename, function (data) {
     renderNavigation(data);
   })

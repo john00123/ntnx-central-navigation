@@ -1,12 +1,68 @@
 [
-    { title:'Cost Governance',
-      level2: ['Dashboard','Analyse','Save','RIa', 'Chargeback', 'Budget','History', 'Reports'
-        ]
-    },
-    { title:'Security Compliance',
-      level2: ['Dashboard','Compliance Remediation','Inventory','History', 'Reports'
-        ]
-    },
-    { single: ' '
-    }
+
+  {
+    "type": "PARENT",
+    "title": "Cost Governance",
+    "nav": [
+      {
+        "type": "PAGE",
+        "title": "Dashboard"
+      },
+      {
+        "type": "PAGE",
+        "title": "Analyse"
+      },
+      {
+        "type": "PAGE",
+        "title": "Save"
+      },
+      {
+        "type": "PAGE",
+        "title": "Ria"
+      },
+      {
+        "type": "PAGE",
+        "title": "Chargeback"
+      },
+      {
+        "type": "PAGE",
+        "title": "Budget"
+      },
+      {
+        "type": "PAGE",
+        "title": "History"
+      },
+      {
+        "type": "PAGE",
+        "title": "Reports"
+      }
+    ]
+  },
+
+  {
+    "type": "PARENT",
+    "title": "Security Compliance",
+    "nav": [
+      {
+        "type": "PAGE",
+        "title": "Dashboard"
+      },
+      {
+        "type": "PAGE",
+        "title": "Compliance Remediation"
+      },
+      {
+        "type": "PAGE",
+        "title": "Inventory"
+      },
+      {
+        "type": "PAGE",
+        "title": "History"
+      },
+      {
+        "type": "PAGE",
+        "title": "Reports"
+      }
+    ]
+  }
 ]

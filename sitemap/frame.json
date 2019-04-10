@@ -1,24 +1,69 @@
 [
-    { title:'Systems',
-      level2: ['Sandbox','TestUX','Licensing Server','File Server'
-        ],
-    },
-    { single: 'Launchpads'
-    },
-    { single: 'Capacity'
-    },
-    { title:'Analytics',
-      level2: ['Sessions','Usage','Disk Usage','Elasticity'
-        ],
-    },
-    { single: 'Activity'
-    },
-    { separator: ''
-    },
-    { single: 'Settings'
-    },
-    { single: 'Status'
-    },
-    { single: ' '
-    }
+  {
+    "type": "PARENT",
+    "title": "Systems",
+    "nav": [
+      {
+        "type": "PAGE",
+        "title": "Sandbox"
+      },
+      {
+        "type": "PAGE",
+        "title": "TestUX"
+      },
+      {
+        "type": "PAGE",
+        "title": "Licensing Server"
+      },
+      {
+        "type": "PAGE",
+        "title": "Live Server"
+      }
+    ]
+  },
+  {
+    "type": "PAGE",
+    "title": "Launchpads"
+  },
+  {
+    "type": "PAGE",
+    "title": "Capacity"
+  },
+  {
+    "type": "PARENT",
+    "title": "Analytics",
+    "nav": [
+      {
+        "type": "PAGE",
+        "title": "Session"
+      },
+      {
+        "type": "PAGE",
+        "title": "Usage"
+      },
+      {
+        "type": "PAGE",
+        "title": "Disk Usage"
+      },
+      {
+        "type": "PAGE",
+        "title": "Elasticty"
+      }
+    ]
+  },
+  {
+    "type": "PAGE",
+    "title": "Activity"
+  },
+  {
+    "type": "SEPARATOR"
+  },
+  {
+    "type": "PAGE",
+    "title": "Settings"
+  },
+  {
+    "type": "PAGE",
+    "title": "Status"
+  }
 ]
