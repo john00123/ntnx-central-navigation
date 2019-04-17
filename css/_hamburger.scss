@@ -5,6 +5,7 @@
   @include size(14px ,14px);
   @include flex(center, space-between, row);
   position: relative;
+  margin-right: 79px;
 
   &:before, &:after, .patty{
     content: '';
