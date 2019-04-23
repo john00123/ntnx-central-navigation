@@ -16,14 +16,14 @@ header{
 }
 
 .page-title{
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: 600;
 }
 
 .arrow{
   background-color: $background-color-2;
   @include size(16px, 16px);
-  margin-left: 10px;
+  margin-left: 15px;
   border-radius: 50%;
 }
 
@@ -57,33 +57,45 @@ header{
 }
 
 .switcher{
-
-    .arrow{
-      margin-right:  20px;
-    }
+  padding: 0 15px;
+    // .arrow{
+    //   margin-right:  20px;
+    // }
 }
 
 .products{
   @include transition(transform);
   position: absolute;
-  width: 300px;
+  width: 640px;
   top:60px;
   background-color: $semi-black;
   border-radius: 0 0 4px 4px;
   padding: 20px;
   transform: translateY(-200px);
   z-index: 1;
+  @include grid(200px,1fr,0px);
 
   a{
     color: $grey-3;
     text-decoration: none;
     font-weight: 600;
-    height: 30px;
+    height: 40px;
+    padding:0 15px;
+    border-radius: 4px;
    &:hover{
      color: white;
      text-decoration: none;
+     background: $black;
    }
   }
+}
+
+.instance-details{
+  width: 100%;
+  grid-column: 1 / span 3;
+  color:white;
+  margin-bottom: 20px;
+  padding: 0 15px;
 }
 
 .prod-expanded{
