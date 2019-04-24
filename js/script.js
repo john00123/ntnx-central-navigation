@@ -4,17 +4,18 @@ const E_STATE = {
 }
 
 const E_PRODUCT = {
-  PRISM_CENTRAL: "Prism Central",
+
   XI_LEAP: "Xi Leap",
   XI_FRAME: "Xi Frame",
   XI_BEAM: "Xi Beam",
   XI_EPOCH: "Xi Epoch",
+  PRISM_CENTRAL: "Prism Central",
   XI_IOT: "Xi IoT",
   XTRACT: "Xtract",
   XTRACT_1: "Complete Backup",
-  XTRACT_2: "Comvault HyperScale",
-  XTRACT_3: "Comvault Orchestrate",
-  XTRACT_4: "Comvault Activate",
+  XTRACT_2: "Commvault  HyperScale",
+  XTRACT_3: "Commvault  Orchestrate",
+  XTRACT_4: "Commvault Activate ",
   XTRACT_5: "Service Desk Plus",
   XTRACT_6: "Docker Pro",
   XTRACT_7: "Apperian",
@@ -68,7 +69,7 @@ function setProduct(e_product) {
 
 
   $('#products').removeClass('prod-expanded')
-  $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg `)
+  $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg`)
   $('#navigation').html('');
   let filename = "./sitemap/" + e_product.toLowerCase().replace(' ', "-") + ".json";
 

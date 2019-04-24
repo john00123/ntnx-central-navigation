@@ -71,6 +71,7 @@ header{
 
 .products{
   @include transition(transform);
+  transition-duration: 300ms;
   position: absolute;
   width: 640px;
   top:60px;
