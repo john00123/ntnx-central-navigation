@@ -10,7 +10,15 @@ const E_PRODUCT = {
   XI_BEAM: "Xi Beam",
   XI_EPOCH: "Xi Epoch",
   XI_IOT: "Xi IoT",
-  XTRACT: "Xtract"
+  XTRACT: "Xtract",
+  XTRACT_1: "Complete Backup",
+  XTRACT_2: "Comvault HyperScale",
+  XTRACT_3: "Comvault Orchestrate",
+  XTRACT_4: "Comvault Activate",
+  XTRACT_5: "Service Desk Plus",
+  XTRACT_6: "Docker Pro",
+  XTRACT_7: "Apperian",
+  XTRACT_8: "Zoura",
 }
 
 let state = E_STATE.EXPAND;
@@ -60,7 +68,7 @@ function setProduct(e_product) {
 
 
   $('#products').removeClass('prod-expanded')
-  $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg`)
+  $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg `)
   $('#navigation').html('');
   let filename = "./sitemap/" + e_product.toLowerCase().replace(' ', "-") + ".json";
 
