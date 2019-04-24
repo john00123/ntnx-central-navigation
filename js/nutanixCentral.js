@@ -9,7 +9,7 @@ $('.products').prepend(
         <p> Instance Name · Addional Data </p>
       </div>
       <div class='buttons' hc>
-        <button class='secondary'> Switch Instance</button>
+        <button class='secondary instanceSwitch' onClick='switchInstance()'> Show Instances</button>
         <button class='secondary'> <img src="./images/search.svg"/> </button>
       </div>
     </div>
@@ -18,6 +18,12 @@ $('.products').prepend(
 );
 
 
+
+function switchInstance(){
+  let button = $('.instanceSwitch')
+  $('.product-grid').slideToggle();
+  button.text() === 'Show Instances' ? button.text('Hide Instances') : button.text('Show Instances');
+}
 
 
 
@@ -37,4 +43,8 @@ setTimeout(function () {
    </div>
     `
   )
+
+  $('.product-grid').find('a').click(function(){
+    $('.products').toggleClass('prod-expanded');
+  })
 }, 200);

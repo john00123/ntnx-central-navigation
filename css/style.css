@@ -184,6 +184,11 @@ header {
   background-color: #37414B;
 }
 
+.info {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
 .buttons {
   flex-shrink: 0;
 }

@@ -145,6 +145,10 @@ header{
   }
 }
 
+.info{
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 .buttons{
   flex-shrink: 0;
   button:first-child{
