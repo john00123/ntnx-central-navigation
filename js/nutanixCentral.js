@@ -21,8 +21,8 @@ $('.products').prepend(
 
 function switchInstance(){
   let button = $('.instanceSwitch')
-  $('.product-grid').slideToggle(300);
-  button.text() === 'Show' ? button.text('Hide') : button.text('Show');
+  button.text() === 'Show' ? button.text('Hide') : button.text('Show')
+  $('.product-grid').slideToggle(200, 'swing');
 }
 
 
@@ -47,9 +47,8 @@ setTimeout(function () {
     $('.products').toggleClass('prod-expanded');
   })
   switchInstance()
+
   $('#Prism').append('<span vc class="multi-instance">5</span>')
 
-  $('#Prism').click(function(){
-     alert('Here you would have choosen your instance')
-  })
-}, 200);
+  $('#Prism').click(function(){ alert('Here you would have choosen your instance')})
+}, 120);

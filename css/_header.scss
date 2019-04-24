@@ -177,15 +177,4 @@ header{
 
 .product-grid{
   margin-bottom: 20px;
-    @include transition(all);
-}
-
-.instance-details{
-  @include transition(all);
-}
-.instance-expanded{
-  transform: scaleY(0);
-
-  opacity: 1;
-
 }
