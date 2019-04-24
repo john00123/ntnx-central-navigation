@@ -47,7 +47,7 @@ $(function () {
 });
 
 function setProduct(e_product) {
-  $('#page-title').text(e_product)
+  $('#page-title, .product-title').text(e_product)
   $('#products').removeClass('prod-expanded')
   $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg`)
   $('#navigation').html('');
