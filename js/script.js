@@ -6,8 +6,11 @@ const E_STATE = {
 const E_PRODUCT = {
   PRISM_CENTRAL: "Prism Central",
   XI_LEAP: "Xi Leap",
-  FRAME: "Frame",
-  BEAM: "Beam"
+  XI_FRAME: "Xi Frame",
+  XI_BEAM: "Xi Beam",
+  XI_EPOCH: "Xi Epoch",
+  XI_IOT: "Xi IoT",
+  XTRACT: "Xtract"
 }
 
 let state = E_STATE.EXPAND;
@@ -37,17 +40,25 @@ $(function () {
   });
 
   $.each(E_PRODUCT, function (index, name) {
-    $('#products').append('<a hcs>' + name + '</a>');
+    $('#products').append('<a hcd id='+name+'>' + name + '<span></span></a>');
   });
 
   $('#products a').click(function (elem) {
-    setProduct($(elem.target).text());
+    setProduct($(elem.target).text().replace('5',''));
   });
 
 });
 
 function setProduct(e_product) {
   $('#page-title, .product-title').text(e_product)
+
+  //
+  e_product !== 'Prism Central' ? $('.instanceSwitch').text('Show').hide() : $('.instanceSwitch').show()
+  e_product !== 'Prism Central' ? $('.product-grid').hide() : null
+  e_product !== 'Prism Central' ? $('.instance-number').hide() : $('.instance-number').show()
+  //
+
+
   $('#products').removeClass('prod-expanded')
   $('#prod-logo').attr('src',`./logos/${e_product.toLowerCase().replace(' ', "_")}.svg`)
   $('#navigation').html('');

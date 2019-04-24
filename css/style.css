@@ -31,6 +31,7 @@ header {
   box-sizing: border-box;
   margin-left: 15px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .user-title {
@@ -74,7 +75,7 @@ header {
 .products, .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 0px;
+  grid-gap: 5px;
 }
 
 .products {
@@ -85,7 +86,7 @@ header {
   background-color: #22272E;
   border-radius: 0 0 4px 4px;
   padding: 20px;
-  transform: translateY(-300px);
+  transform: translateY(-100%);
   z-index: 1;
 }
 
@@ -101,11 +102,20 @@ header {
 .products a:hover {
   color: white;
   text-decoration: none;
-  background: #000000;
+  background: #1B2025;
 }
 
 .prod-expanded {
   transform: translateY(0);
+}
+
+.multi-instance {
+  border: 1px solid #37414B;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-size: 12px;
 }
 
 .instance-details {
@@ -115,7 +125,7 @@ header {
   width: 100%;
   grid-column: 1 / span 3;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0 20px;
 }
 
@@ -131,12 +141,17 @@ header {
 .instance-details a:hover {
   color: white;
   text-decoration: none;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .instance-details p {
   margin-top: 0;
-  color: #4D5969;
+  color: #627386;
+  font-weight: 500;
+}
+
+.instance-details p span {
+  font-weight: 500;
 }
 
 .instance-details h3 {
@@ -156,10 +171,10 @@ header {
   text-decoration: none;
   background-color: #22A5F7;
   outline: none;
-  background-color: #4D5969;
+  background-color: #37414B;
   color: white;
   font-weight: 500;
-  height: 34px;
+  height: 32px;
 }
 
 .secondary:hover {
@@ -181,7 +196,13 @@ header {
 }
 
 .secondary:hover {
-  background-color: #37414B;
+  background-color: #4D5969;
+}
+
+.search-button {
+  height: 32px;
+  width: 32px;
+  padding: 0;
 }
 
 .info {

@@ -26,6 +26,7 @@ header{
   @include size(16px, 16px);
   margin-left: 15px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 
@@ -65,7 +66,7 @@ header{
 }
 
 .products, .product-grid{
-  @include grid(200px,1fr,0px);
+  @include grid(200px,1fr,5px);
 }
 
 .products{
@@ -76,7 +77,7 @@ header{
   background-color: $background-color-1;
   border-radius: 0 0 4px 4px;
   padding: 20px;
-  transform: translateY(-300px);
+  transform: translateY(-100%);
   z-index: 1;
 
 
@@ -90,7 +91,7 @@ header{
    &:hover{
      color: white;
      text-decoration: none;
-     background: $black;
+     background: $semi-black;
    }
   }
 }
@@ -100,7 +101,18 @@ header{
 }
 
 // information
+// span{
+//   @include size(10px, 10px);
+//   background-color: rgba(0,0,0,0.12);
+//   border-radius: 4pc;
+// }
 
+.multi-instance{
+  border: 1px solid $dark-grey-2;
+  @include size(16px, 16px)
+  border-radius: 2px;
+  font-size: 12px;
+}
 .instance-details{
   background-color: $semi-black;
   margin-left: -20px;
@@ -108,7 +120,7 @@ header{
   width: 100%;
   grid-column: 1 / span 3;
   color:white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 0 20px;
   a{
     color: $grey-3;
@@ -120,12 +132,14 @@ header{
    &:hover{
      color: white;
      text-decoration: none;
-     background: $black;
+     background: rgba(0,0,0,0.2);
    }
   }
   p{
     margin-top: 0;
-    color: $dark-grey-3;
+    color: $grey-1;
+    font-weight:500;
+    span{font-weight: 500}
   }
   h3{
     margin-top: 20px;
@@ -136,13 +150,19 @@ header{
 
 .secondary{
   @include primary;
-  background-color: $dark-grey-3;
+  background-color: $dark-grey-2;
   color: white;
   font-weight: 500;
-  height: 34px;
+  height: 32px;
   &:hover{
-    background-color:$dark-grey-2;
+    background-color:$dark-grey-3;
   }
+}
+
+.search-button{
+  height: 32px;
+  width: 32px;
+  padding: 0;
 }
 
 .info{
