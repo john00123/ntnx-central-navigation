@@ -9,6 +9,7 @@ $('.products').prepend(
         <p> Development     <kbd class='instance-number'> &nbsp;·&nbsp; Product ABC</kbd> </p>
       </div>
       <div class='buttons' hc>
+        <!-- <input  style ='margin:0' type='text'/> -->
         <button class='secondary instanceSwitch' onClick='switchInstance()'> Show</button>
         <button class='secondary search-button'> <img src="./images/search.svg"/> </button>
       </div>
