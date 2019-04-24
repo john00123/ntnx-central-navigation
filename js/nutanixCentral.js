@@ -48,4 +48,8 @@ setTimeout(function () {
   })
   switchInstance()
   $('#Prism').append('<span vc class="multi-instance">5</span>')
+
+  $('#Prism').click(function(){
+     alert('Here you would have choosen your instance')
+  })
 }, 200);
