@@ -21,7 +21,7 @@ $('.products').prepend(
 
 function switchInstance(){
   let button = $('.instanceSwitch')
-  $('.product-grid').slideToggle(300,'swing');
+  $('.product-grid').slideToggle(300, 'swing');
   button.text() === 'Show' ? button.text('Hide') : button.text('Show');
 }
 
