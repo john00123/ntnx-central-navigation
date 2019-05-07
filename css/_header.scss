@@ -15,10 +15,22 @@ header{
   position: fixed;
 }
 
-.page-title{
+.page-title-parent{
   margin-left: 15px;
-  font-weight: 600;
   flex-shrink: 0;
+  height: 30px;
+  overflow:hidden;
+}
+
+.page-title-scroll{
+  @include transition(transform)
+  transform: translateY(25px);
+  p{font-weight: 500}
+}
+
+.page-title{
+  font-weight: 600;
+  display: flex;
 }
 
 .arrow{
@@ -56,23 +68,27 @@ header{
   background-color: $semi-black;
   cursor: pointer;
   border-radius: 4px;
+  .page-title-scroll{
+    transform: translateY(-13px);
+  }
 }
 
 .switcher{
   padding: 0 15px;
+
     // .arrow{
     //   margin-right:  20px;
     // }
 }
 
 .products, .product-grid{
-  @include grid(200px,1fr,5px);
+  @include grid(150px,1fr,5px);
 }
 
 .products{
   @include transition(transform);
   position: absolute;
-  width: 640px;
+  width: 540px;
   top:60px;
   background-color: $background-color-1;
   border-radius: 0 0 4px 4px;
@@ -120,6 +136,7 @@ header{
   grid-column: 1 / span 3;
   color:white;
   padding: 0 20px;
+
   a{
     color: $grey-3;
     text-decoration: none;
@@ -171,6 +188,12 @@ header{
 .buttons{
   flex-shrink: 0;
   button:first-child{
+    margin-right: 10px;
+  }
+
+  input{
+    margin-bottom: 0;
+    margin-top: 18px;
     margin-right: 10px;
   }
 }

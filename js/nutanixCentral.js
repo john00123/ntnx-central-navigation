@@ -3,19 +3,18 @@
 $('.products').prepend(
   `
   <div class='instance-details' vs>
-    <div class='info' hcs fw>
-      <div fw>
-        <h3 class='product-title'> Service Name</h3>
-        <p> Development     <kbd class='instance-number'> &nbsp;·&nbsp; Product ABC</kbd> </p>
-      </div>
+
       <div class='buttons' hc>
-        <button class='secondary instanceSwitch' onClick='switchInstance()'> Show</button>
-        <button class='secondary search-button'> <img src="./images/search.svg"/> </button>
+        <input></input>
+        <button class='secondary search-button'> <img src="./images/search.svg">
+        </button>
       </div>
     </div>
   </div>
   `
 );
+
+
 
 
 
@@ -53,3 +52,7 @@ setTimeout(function () {
      alert('Here you would have choosen your instance')
   })
 }, 200);
+
+
+$('#page-title').append('<span alt>Product ABC</span>');
+console.log('done')
