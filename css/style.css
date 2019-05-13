@@ -91,6 +91,24 @@ header {
   z-index: 1;
 }
 
+.products:before, .products:after {
+  content: '';
+  position: absolute;
+  top: 95px;
+  width: 1px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.products:before {
+  left: 34.1%;
+}
+
+.products:after {
+  right: 34%;
+}
+
 .products a {
   color: #9AA5B5;
   text-decoration: none;

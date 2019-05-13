@@ -59,7 +59,7 @@ $(function () {
 });
 
 function setProduct(e_product) {
-  $('#page-title, .product-title').text(e_product)
+  $('#page-title').text(e_product)
 
   //
   e_product !== 'Prism Central' ? $('.instanceSwitch').text('Show').hide() : $('.instanceSwitch').show()

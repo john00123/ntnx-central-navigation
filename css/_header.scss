@@ -82,6 +82,19 @@ header{
   z-index: 1;
 
 
+  &:before,&:after{
+    content: '';
+    position: absolute;
+    top: 95px;
+    width: 1px;
+    height: 200px;
+    background-color: rgba(0,0,0,0.08);
+    border-left: 1px solid rgba(255,255,255,0.05)
+  }
+  &:before{ left: 34.1%}
+  &:after{ right: 34%}
+
+
   a{
     color: $grey-3;
     text-decoration: none;
@@ -89,6 +102,8 @@ header{
     height: 40px;
     padding:0 15px;
     border-radius: 4px;
+
+
    &:hover{
      color: white;
      text-decoration: none;
