@@ -4,14 +4,15 @@ $('.products').prepend(
   `
   <div class='instance-details' vs>
     <div class='info' hcs fw>
-      <div fw>
-        <h3 class='product-title'> Instance 123123</h3>
-        <p> Project Development     <kbd class='instance-number'> &nbsp;·&nbsp; Change</kbd> </p>
+      <div class='left-title' hs fw>
+        <h3 hs class='product-title isSwitch'> Instance 123123 <kbd class="multi-instance ty">5</kbd> </h3>
+        <p>Project Development     <kbd class='instance-number'></kbd> </p>
       </div>
       <div class='buttons' hc>
         <!-- <input  style ='margin:0' type='text'/> -->
-
+        <input id='filter-input' type='text'/>
         <button class='secondary search-button'> <img src="./images/search.svg"/> </button>
+        <button class='secondary search-button'> <img src="./images/filter.svg"/> </button>
       </div>
     </div>
   </div>
@@ -32,5 +33,60 @@ setTimeout(function () {
   })
   $('#Prism').append('<span vc class="multi-instance">5</span>')
 
-  $('#Prism').click(function(){ alert('Here you would have choosen your instance')})
+  $('.left-title').click()
+  $('#Prism').click(popUp)
 }, 120);
+
+let search = $('.search-button');
+
+search.click(function(){
+  $('#filter-input').fadeToggle()
+})
+
+$('.isSwitch').hover(function() {
+  $(this).find('p').text('Change Instance')
+  },
+  function() {
+    $(this).find('p').text('Project Development')
+  }
+)
+
+
+$('.isSwitch').click(popUp)
+
+function popUp() {
+
+  $('body').append(`<div vc class='overlay'>
+
+    <div vc class='popup-container'>
+      <div hcd class='popup-header'><div></div><h3> Choose Instance </h3>
+      <img class='close' src="./images/cross.svg"/></div>
+      <div class='popup-body'>
+        <div hcd class='instance'>
+          <div> <p>Instance 1111 </p><p alt> Development </p>
+          </div>
+          <button class='primary'> Select</button>
+        </div>
+
+        <div hcd class='instance'>
+          <div> <p>Instance 1111 </p><p alt> Development </p>
+          </div>
+          <button class='primary'> Select</button>
+        </div>
+        <div hcd class='instance'>
+          <div> <p>Instance 1111 </p><p alt> Development </p>
+          </div>
+          <button class='primary'> Select</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </>`)
+
+  $('.primary, .close').click(function() {
+    $('.overlay').remove()
+    $('.switcher').click()
+  })
+}

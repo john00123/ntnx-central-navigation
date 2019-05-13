@@ -94,7 +94,7 @@ header {
 .products:before, .products:after {
   content: '';
   position: absolute;
-  top: 95px;
+  top: 100px;
   width: 1px;
   height: 200px;
   background-color: rgba(0, 0, 0, 0.08);
@@ -135,6 +135,7 @@ header {
   box-sizing: border-box;
   border-radius: 2px;
   font-size: 12px;
+  flex-shrink: 0;
 }
 
 .instance-details {
@@ -216,6 +217,18 @@ header {
   background-color: #4D5969;
 }
 
+#filter-input {
+  margin-right: -10px;
+  margin-bottom: 0;
+  border-radius: 4px 0 0 4px;
+  transform: translateX(10px);
+  border-right: 0;
+  background-color: #1B2025;
+  border-color: #37414B;
+  display: none;
+  color: white;
+}
+
 .search-button {
   height: 32px;
   width: 32px;
@@ -223,11 +236,30 @@ header {
   height: 32px;
   width: 32px;
   padding: 0;
+  margin-left: 10px;
+  flex-shrink: 0;
+  border: 1px solid #37414B;
+  background-color: transparent;
+}
+
+.search-button:hover {
+  background-color: transparent;
+  fill: white;
 }
 
 .info {
   padding: 0 15px;
   box-sizing: border-box;
+  min-height: 80px;
+}
+
+.info p, .info h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.info p {
+  margin-top: 8px;
 }
 
 .buttons {
@@ -240,6 +272,17 @@ header {
 
 .product-grid {
   margin-bottom: 20px;
+}
+
+.left-title:hover {
+  cursor: pointer;
+}
+
+.ty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
 }
 
 * {
@@ -736,6 +779,83 @@ details > summary::-webkit-details-marker {
 
 .cross .patty {
   opacity: 0;
+}
+
+.overlay {
+  min-height: 100vh;
+  min-width: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.popup-container {
+  background-color: white;
+  height: auto;
+  width: 500px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.popup-header {
+  height: 50px;
+  border-bottom: 1px solid #F2F4F6;
+  width: 100%;
+}
+
+.popup-header img {
+  margin-right: 20px;
+}
+
+.popup-body {
+  border-radius: 4px;
+  border: 1px solid #D5DAE0;
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+
+.primary {
+  margin: 0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  color: #FFFFFF;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
+  border: none;
+  text-decoration: none;
+  background-color: #22A5F7;
+  outline: none;
+}
+
+.primary:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #1f88de;
+}
+
+.primary:active {
+  color: #FFFFFF;
+  background-color: #1b6dc6;
+}
+
+.primary span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
+.instance {
+  padding: 20px;
+}
+
+.instance:not(:last-child) {
+  border-bottom: 1px solid #F2F4F6;
+}
+
+.instance p {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 html {

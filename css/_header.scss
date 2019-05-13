@@ -85,7 +85,7 @@ header{
   &:before,&:after{
     content: '';
     position: absolute;
-    top: 95px;
+    top: 100px;
     width: 1px;
     height: 200px;
     background-color: rgba(0,0,0,0.08);
@@ -128,7 +128,9 @@ header{
   @include size(16px, 16px)
   border-radius: 2px;
   font-size: 12px;
+  flex-shrink: 0;
 }
+
 .instance-details{
   background-color: $semi-black;
   margin: -20px 0 10px -20px;
@@ -173,17 +175,44 @@ header{
   }
 }
 
+#filter-input{
+  margin-right: -10px;
+  margin-bottom: 0;
+  border-radius: 4px 0 0 4px;
+  transform: translateX(10px);
+  border-right: 0;
+  background-color: $semi-black;
+  border-color: $dark-grey-2;
+  display: none;
+  color: white;
+}
+
 .search-button{
   @include size(32px, 32px);
   height: 32px;
   width: 32px;
   padding: 0;
+  margin-left: 10px;
+  flex-shrink: 0;
+  border: 1px solid $dark-grey-2;
+  background-color: transparent;
+  &:hover{
+    background-color: transparent;
+    fill: white;
+  }
 }
 
 .info{
   padding: 0 15px;
   box-sizing: border-box;
+  min-height: 80px;
+  p, h3{
+    margin: 0;
+    line-height: 1.2;
+  }
+  p{margin-top: 8px}
 }
+
 .buttons{
   flex-shrink: 0;
   button:first-child{
@@ -193,4 +222,15 @@ header{
 
 .product-grid{
   margin-bottom: 20px;
+}
+
+.left-title:hover{
+  cursor: pointer;
+}
+
+.ty{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
 }
