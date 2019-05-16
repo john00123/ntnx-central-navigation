@@ -782,8 +782,8 @@ details > summary::-webkit-details-marker {
 }
 
 .overlay {
-  min-height: 100vh;
-  min-width: 100vh;
+  height: 300%;
+  width: 300%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;

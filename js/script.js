@@ -4,7 +4,7 @@ const E_STATE = {
 }
 
 const E_PRODUCT = {
-
+  XTRACT_1: "Nutanix Central",
   XI_LEAP: "Xi Leap",
   XI_FRAME: "Xi Frame",
   XI_BEAM: "Xi Beam",
@@ -12,7 +12,7 @@ const E_PRODUCT = {
   PRISM_CENTRAL: "Prism Central",
   XI_IOT: "Xi IoT",
   XTRACT: "Xtract",
-  XTRACT_1: "Complete Backup",
+
   XTRACT_2: "Commvault  HyperScale",
   XTRACT_3: "Commvault  Orchestrate",
   XTRACT_4: "Commvault Activate ",

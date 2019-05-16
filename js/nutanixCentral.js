@@ -5,8 +5,8 @@ $('.products').prepend(
   <div class='instance-details' vs>
     <div class='info' hcs fw>
       <div class='left-title' hs fw>
-        <h3 hs class='product-title isSwitch'> Instance 123123 <kbd class="multi-instance ty">5</kbd> </h3>
-        <p>Project Development     <kbd class='instance-number'></kbd> </p>
+        <p hs class='product-title isSwitch'> Instance 123123 </p>
+        <p class='values'>Project Development </p>
       </div>
       <div class='buttons' hc>
         <!-- <input  style ='margin:0' type='text'/> -->
@@ -18,9 +18,6 @@ $('.products').prepend(
   </div>
   `
 );
-
-
-
 
 
 
@@ -44,15 +41,19 @@ search.click(function(){
 })
 
 $('.isSwitch').hover(function() {
-  $(this).find('p').text('Change Instance')
+  $('.values').text('Change Instance')
   },
   function() {
-    $(this).find('p').text('Project Development')
+    $('.values').text('Project Development')
   }
 )
 
 
 $('.isSwitch').click(popUp)
+
+
+
+
 
 function popUp() {
 
@@ -87,6 +88,5 @@ function popUp() {
 
   $('.primary, .close').click(function() {
     $('.overlay').remove()
-    $('.switcher').click()
   })
 }
